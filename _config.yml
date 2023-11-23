@@ -1,0 +1,33 @@
+---
+languages: [fr_FR,en_US]
+baseurl: "/"
+sass:
+  sass_dir: css
+  style: compressed
+permalink: /404.html
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
+  syntax_highlighter: rouge
+highlighter: rouge
+gems:
+- jekyll-paginate
+- jekyll-seo-tag
+exclude:
+- vendor
+plugins:
+- jekyll-seo-tag
+title: "Documentation Bad's Jeedom"
+description: "Ceci est la documentation liée à la solution domotique Jeedom."
+author: "Jeedom"
+image: https://www.jeedom.com/site/logo.png
+twitter:
+  username: Jeedom_domotic
+social:
+  name: Jeedom
+  links:
+    - https://twitter.com/Jeedom_domotic
+    - https://www.facebook.com/Jeedom-249936178537210/
+    - https://github.com/jeedom
