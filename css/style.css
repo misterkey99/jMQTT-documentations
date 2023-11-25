@@ -155,11 +155,12 @@ input,
   fill: var(--link-color);
 }
 #navTopLeft {
-  background: url("../img/background3.jpg") !important;
+  background: url("/img/logo_top.jpg") !important;
   background-size: cover !important;
 }
 #navTopLeft a {
   color: var(--linkHoverLight-color) !important;
+  font-weight: bold;
   background-color: transparent !important;
 }
 #slide-out {
