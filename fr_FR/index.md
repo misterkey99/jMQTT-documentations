@@ -1,3 +1,3 @@
-### Documentation des plugins Jeedom
+### Documentation des plugins de Bad pour Jeedom
 
-Bienvenue sur le site de documentation des plugins Jeedom de Bad
+[Bienvenue sur la documentation des plugins de Bad pour Jeedom](https://docs.bad.wf/)
