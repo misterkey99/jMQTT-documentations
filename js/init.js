@@ -220,57 +220,80 @@ setTheme();
 
 $('#ul_menu').empty();
 var html = '';
-var defaultLang = 'fr_FR';
-var lang = defaultLang;
-if (window.location.href.indexOf('fr_FR') != -1) {
-  lang = 'fr_FR'
-} else if (window.location.href.indexOf('en_US') != -1) {
-  lang = 'en_US'
-} else if (window.location.href.indexOf('es_ES') != -1) {
-  lang = 'es_ES'
-} else if (window.location.href.indexOf('de_DE') != -1) {
-  lang = 'de_DE'
-} else if (getCookie('lang') != '') {
-  lang = getCookie('lang');
-} else {
-  var userLang = navigator.language || navigator.userLanguage;
-  userLang = userLang.toLowerCase();
-  if (userLang.indexOf('en') !== -1) {
-    lang = 'en_US'
-  } else if (userLang.indexOf('es') !== -1) {
-    lang = 'es_ES'
-  } else if (userLang.indexOf('de') !== -1) {
-    lang = 'de_DE'
+
+// ----------------------------------------------------------------------------
+var lang = null;
+var langs = [];
+// get languages list and default value
+let lang_opts = document.getElementById('sel_lang').options;
+var defaultLang = lang_opts[lang_opts.selectedIndex].value;
+// get all languages
+for(let i=0; i < lang_opts.length; i++) {
+  if (lang_opts[i].value) {
+    langs.push(lang_opts[i].value);
   }
 }
+// match language in url
+langs.forEach(val => {
+  if (window.location.href.indexOf('/' + val + '/') != -1) {
+    lang = val;
+  }
+});
+// match language in navigator
+if (!lang) {
+  var userLang = navigator.language || navigator.userLanguage;
+  userLang = userLang.slice(0, 2).toLowerCase();
+  langs.forEach(val => {
+    if (userLang.indexOf(val.slice(0, 2).toLowerCase()) !== -1) {
+      lang = val;
+    }
+  });
+}
+// use default language
+if (!lang) {
+  lang = defaultLang;
+}
+// set language in cookie
 if (getCookie('lang') != lang) {
-  setCookie('lang',lang,7)
+  setCookie('lang', lang, 7);
 }
+$('#meta-lang').attr('content', lang);
 
-$('#meta-lang').attr('content',lang)
-var jeedomVersion = '4.3'
-if (window.location.href.indexOf('3.3') != -1) {
-  jeedomVersion = '3.3'
-} else if (window.location.href.indexOf('4.0') != -1) {
-  jeedomVersion = '4.0'
-} else if (window.location.href.indexOf('4.1') != -1) {
-  jeedomVersion = '4.1'
-} else if (window.location.href.indexOf('4.2') != -1) {
-  jeedomVersion = '4.2'
-} else if (window.location.href.indexOf('4.3') != -1) {
-  jeedomVersion = '4.3'
-} else if (window.location.href.indexOf('4.4') != -1) {
-  jeedomVersion = '4.4'
-} else if (getCookie('jeedomVersion') != '') {
-  jeedomVersion = getCookie('jeedomVersion');
+// ----------------------------------------------------------------------------
+var version = null;
+var versions = [];
+// get versions list and default value
+let ver_opts = document.getElementById('sel_version').options;
+var defaultVersion = ver_opts[ver_opts.selectedIndex].value;
+// get all versions
+for(let i=0; i < ver_opts.length; i++) {
+  if (ver_opts[i].value) {
+    versions.push(ver_opts[i].value);
+  }
 }
-if (getCookie('jeedomVersion') != jeedomVersion) {
-  setCookie('jeedomVersion',jeedomVersion,7)
+// match version in url
+versions.forEach(val => {
+  if (window.location.href.indexOf('/' + val + '/') != -1) {
+    version = val;
+  }
+});
+// get version from cookie
+if (getCookie('version') != '') {
+  version = getCookie('version');
 }
-if ($('#sel_jeedomVersion').val() != jeedomVersion) {
-  $('#sel_jeedomVersion').val(jeedomVersion);
+// use default version
+if (!version) {
+  version = defaultVersion;
+}
+// set version in cookie
+if (getCookie('version') != version) {
+  setCookie('version', version, 7)
+}
+if ($('#sel_version').val() != version) {
+  $('#sel_version').val(version);
 }
 $('#sel_lang').val(lang);
+
 for (var i in docMenu) {
   var menu = docMenu[i]
   if (menu.divider) {
@@ -285,10 +308,10 @@ for (var i in docMenu) {
       if (submenu.link == '') {
         continue;
       }
-      if (submenu.version && submenu.version.indexOf(jeedomVersion) == -1) {
+      if (submenu.version && submenu.version.indexOf(version) == -1) {
         continue;
       }
-      html += '<li><a href="'+submenu.link.replace('#LANG#',lang).replace('#VERSION#',jeedomVersion)+'">'+genText(submenu,lang)+'</a></li>';
+      html += '<li><a href="'+submenu.link.replace('#LANG#',lang).replace('#VERSION#',version)+'">'+genText(submenu,lang)+'</a></li>';
     }
     html += '</ul>';
     html += '</div>';
@@ -298,7 +321,7 @@ for (var i in docMenu) {
       if (menu.link == '') {
         continue;
       }
-      html += '<li><a href="'+menu.link.replace('#LANG#',lang).replace('#VERSION#',jeedomVersion)+'">'+genText(menu,lang)+'</a></li>';
+      html += '<li><a href="'+menu.link.replace('#LANG#',lang).replace('#VERSION#',version)+'">'+genText(menu,lang)+'</a></li>';
     } else {
       html += '<li><strong style="margin-left:5px;" href="#!">'+genText(menu,lang)+'</strong></li>';
     }
@@ -311,7 +334,7 @@ function genText(_menu,_lang) {
   let _text = _menu[defaultLang];
   if (_menu[lang]) {
     _text = _menu[lang];
-  } 
+  }
   if (_menu.icon) {
     return '<i class="'+_menu.icon+'"></i>'+_text;
   } else if (_menu.img) {
@@ -379,11 +402,18 @@ $(function() {
     setTheme();
   })
 
-  $('#sel_jeedomVersion').on('change',function() {
-    setCookie('jeedomVersion',$(this).val(),7)
+  $('#sel_version').on('change',function() {
+    setCookie('version',$(this).val(),7)
     var url = window.location.href;
-    if (url.indexOf('/core/') != -1 && url.indexOf(getCookie('jeedomVersion')) == -1) {
-      window.location.href = url.replace('3.3',getCookie('jeedomVersion')).replace('4.0',getCookie('jeedomVersion')).replace('4.1',getCookie('jeedomVersion')).replace('4.2',getCookie('jeedomVersion')).replace('4.3',getCookie('jeedomVersion')).replace('4.4',getCookie('jeedomVersion'))
+    if (url.indexOf('/core/') != -1 && url.indexOf(getCookie('version')) == -1) {
+      window.location.href =
+      url
+        .replace('3.3',getCookie('version'))
+        .replace('4.0',getCookie('version'))
+        .replace('4.1',getCookie('version'))
+        .replace('4.2',getCookie('version'))
+        .replace('4.3',getCookie('version'))
+        .replace('4.4',getCookie('version'))
       return;
     }
     window.location.reload();
