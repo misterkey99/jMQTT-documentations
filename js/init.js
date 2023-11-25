@@ -1,6 +1,6 @@
 var docMenu = [
   {
-    fr_FR : 'Brother <img src="/img/brother_icon.png" style="height: 18px;margin: 0 40px 0 0;" />',
+    fr_FR : '<img src="/img/brother_icon.png" style="height: 40px;margin: 0 15px 0 5px;" /> Brother',
     link : "/#LANG#/brother/index",
     submenu:[
       {
@@ -23,7 +23,7 @@ var docMenu = [
     ]
   },
   {
-    fr_FR : 'jMQTT <img src="/img/jMQTT_icon.png" style="height: 18px;margin: 0 40px 0 0;" />',
+    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 15px 0 5px;" /> jMQTT',
     link : "/#LANG#/jmqtt/index",
     submenu:[
       {
