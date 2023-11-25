@@ -58,7 +58,7 @@ Après installation du plugin, il suffit de l’activer. Celui-ci prend quelques
 
 Le reste de la configuration principale est assez sommaire :
 
-![Configuration du plugin](../images/config.png)
+![Configuration du plugin](images/config.png)
 
 C'est aussi sur cette page qu'il est possible d'ajouter et de supprimer des certificats SSL pour les Broker.
 
@@ -72,11 +72,11 @@ jMQTT posséde 2 types d'équipements:
 
 Le panneau supérieur gauche, intitulé *Gestion plugin et Broker*, permet de configurer le plugin, et de lister les équipements Broker.
 
-![Gestion plugin et Broker](../images/gestion_plugin_et_brokers.png)
+![Gestion plugin et Broker](images/gestion_plugin_et_brokers.png)
 
 Sur les équipements Broker, un point de couleur indique l'état de la connexion au Broker :
 
-![Status Broker](../images/broker_status.png)
+![Status Broker](images/broker_status.png)
 
 * Vert: la connexion au Broker est opérationnelle
 * Orange: le démon tourne mais la connexion au Broker n'est pas établie
@@ -84,7 +84,7 @@ Sur les équipements Broker, un point de couleur indique l'état de la connexion
 
 Ensuite, pour chaque Broker, un panneau présente les équipements connectés à celui-ci.
 
-![eqpt panel](../images/eqpt_panel.png)
+![eqpt panel](images/eqpt_panel.png)
 
 Se trouve également sur ce panneau :
   - Un bouton **+** permettant l'[ajout manuel d'un équipement](#ajout-manuel-dun-équipement);
@@ -104,7 +104,7 @@ Suite à sa création, un message indique que la commande *status* a été ajout
 
 ### Configuration
 
-![Configuration du Broker](../images/eqpt_broker.png)
+![Configuration du Broker](images/eqpt_broker.png)
 
 Par défaut, un équipement Broker est configuré pour s’inscrire au Broker Mosquitto installé localement. Si cette configuration convient, activer l'équipement et sauvegarder. Revenir sur l'onglet _Broker_, le status du démon devrait passer à OK.
 
@@ -160,7 +160,7 @@ A l’arrivée du premier message, le plugin crée automatiquement un équipemen
 
 ### Onglet Equipement
 
-![Onglet principal d'un Equipement](../images/eqpt_equipement.png)
+![Onglet principal d'un Equipement](images/eqpt_equipement.png)
 
 Dans le premier onglet d’un équipement jMQTT, nous trouvons les paramètres communs aux autres équipements Jeedom, ainsi que cinq paramètres spécifiques au plugin :
 
@@ -189,7 +189,7 @@ Dans le premier onglet d’un équipement jMQTT, nous trouvons les paramètres c
 
 Concernant les boutons en haut à droite :
 
-![Boutons sur un Equipement](../images/eqpt_buttons.png)
+![Boutons sur un Equipement](images/eqpt_buttons.png)
 
   - `Appliquer template` permet d'[Appliquer un template existant à l'équipement en cours](#application-dun-template-sur-un-équipement) ;
   - `Créer template` permet de [Créer un template à partir de l'équipement en cours](#création-dun-template-depuis-un-équipement) ;
@@ -312,7 +312,7 @@ Si nous rebasculons dans la vue JSON, nous obtenons alors :
 
 Les commandes de type action permettent au plugin jMQTT de publier des messages vers le Broker MQTT. Pour cela, créer une commande via le bouton *+ Ajouter une commande action* et remplir les champs selon le besoin :
 
-![Commande Action](../images/cmd_action.png)
+![Commande Action](images/cmd_action.png)
 
   - Nom: champ libre ;
   - Valeur par défaut de la commande: pour lier la valeur de la commande affichée sur le dashboard à une commande de type Information (exemple [ici](https://www.jeedom.com/forum/viewtopic.php?f=96&t=32675&p=612364#p602740)) ;
@@ -327,7 +327,7 @@ Les commandes de type action permettent au plugin jMQTT de publier des messages 
 
 Les exemples du tableau suivant :
 
-![Commande Action sous-type Defaut](../images/cmd_action_default.png)
+![Commande Action sous-type Defaut](images/cmd_action_default.png)
 
 Publieront respectivement :
 
@@ -341,7 +341,7 @@ En supposant que `#[home][boiler][hw_setpoint]#` a pour valeur 45.
 
 Les configurations suivantes publieront la valeur saisie via un widget de type curseur :
 
-![Commande Action sous-type Curseur](../images/cmd_action_slider.png)
+![Commande Action sous-type Curseur](images/cmd_action_slider.png)
 
 Soit respectivement, en supposant que la valeur du curseur est 50 :
 
@@ -358,13 +358,13 @@ Pour un message dont le titre est `ecs` et le contenu est `50`, la configuration
 
     boiler {"setpoint": "ecs", "value": 50}
 
-![Commande Action sous-type Message](../images/cmd_action_message.png)
+![Commande Action sous-type Message](images/cmd_action_message.png)
 
 **Sous-type Couleur**
 
 La configuration suivante publiera le code couleur sélectionnée via un widget sélecteur de couleur :
 
-![Commande Action sous-type Couleur](../images/cmd_action_color.png)
+![Commande Action sous-type Couleur](images/cmd_action_color.png)
 
 Publiera pour une couleur rouge clair selectionnée :
 
@@ -372,7 +372,7 @@ Publiera pour une couleur rouge clair selectionnée :
 
 #### Vue Classic, vue JSON
 
-![Cassic/JSON buttons](../images/classic_json_buttons.png)
+![Cassic/JSON buttons](images/classic_json_buttons.png)
 
 Deux boutons en haut à droite de la page permettent de choisir entre 2 types du vue :
   - La vue **Classic** montre les commandes dans l’ordre d’affichage sur la tuile du Dashboard. Elle permet de les réordonner par glissé/déposé ;
@@ -407,7 +407,7 @@ Une boite de dialogue demande le nom du nouvel équipement. Sont dupliqués :
 
 Le bouton *Santé*, présent dans la page de [Gestion des équipements](#gestion-des-équipements), permet d'afficher une vue de la santé des Broker et des équipements :
 
-![Modal Santé](../images/health.png)
+![Modal Santé](images/health.png)
 
 Les informations présentes sont : le nom, l'ID, le Topic de souscription, la date de Dernière communication, la Date de création et l'état des Brokers (Activation et communication, Visibilité et Auto inclusion) ainsi que des équipements (Activation, Visibilité, Inclusion automatique, Batterie et Disponibilité).
 
@@ -418,15 +418,15 @@ Les templates conservent toutes les commandes d'origine, leurs configurations et
 
 Dans un permier temps, il est possible de [créer](#création-dun-template-depuis-un-équipement) ou d'[appliquer](#application-dun-template-sur-un-équipement) un template à un équipement existant, celà se passe directement sur un équipement :
 
-![Boutons sur un Equipement](../images/eqpt_buttons.png)
+![Boutons sur un Equipement](images/eqpt_buttons.png)
 
 Ensuite, le gestionnaire de Template est présent dans la section *Gestion plugin et brokers* du plugin :
 
-![Gestion des templates](../images/gestion_templates.png)
+![Gestion des templates](images/gestion_templates.png)
 
 Il permet d'ajouter, de télécharger et de supprimer des templates et d'en visualiser les commandes.
 
-![Modal gestion des templates](../images/modal_gestion_templates.png)
+![Modal gestion des templates](images/modal_gestion_templates.png)
 
 Dans le gestionnaire, on distingue différentes sections :
   1. La liste des templates existants.
@@ -447,7 +447,7 @@ Lorsqu'un template est selectionné dans la liste, la partie de droite est rense
 
 La seule information à renseigner est le nom que vous souhaitez donner à votre template.
 
-![Créer un template](../images/create_template.png)
+![Créer un template](images/create_template.png)
 
 Une fois la fenêtre validée, un nouveau template est disponible sur le système et peut être utilisé.
 
@@ -455,7 +455,7 @@ Une fois la fenêtre validée, un nouveau template est disponible sur le systèm
 
 Quand on souhaite appliquer un template, 3 informations sont attendues :
 
-![Appliquer un template](../images/apply_template.png)
+![Appliquer un template](images/apply_template.png)
 
   - Le template à appliquer ;
   - Le topic de base qui sera utilisé pour spécialiser les commandes et la souscription de l'équipement ;
@@ -539,11 +539,11 @@ Nous souhaitons que lorsqu'une application publie le message `saison/set hiver` 
 
 Pour ce faire, il faut créer une deuxième commande action côté virtuel (commande *set\_saison* ci-dessous) qui mette à jour l’information saison du virtuel à partir de celle de l’équipement jMQTT. Le virtuel est donc configuré comme ceci :
 
-![saison virtuel](../images/saison_virtuel.png)
+![saison virtuel](images/saison_virtuel.png)
 
 Côté équipement jMQTT, nous avons la configuration simple suivante :
 
-![saison jmqtt](../images/saison_jmqtt.png)
+![saison jmqtt](images/saison_jmqtt.png)
 
 Ensuite, il y a deux solutions pour lier les commandes :
 
@@ -551,8 +551,8 @@ Ensuite, il y a deux solutions pour lier les commandes :
 
   - Configurer une *action sur valeur* en cliquant sur la roue crantée à droite de la commande info `[Saison jMQTT][set]`, onglet *Configuration*:
 
-![saison action sur valeur](../images/saison_action_sur_valeur.png)
+![saison action sur valeur](images/saison_action_sur_valeur.png)
 
 Attention, quel que soit la solution, il est important de configurer la *Gestion de la répétition des valeurs* de la commande info `[Saison jMQTT][set]` à *Toujours répéter* pour que toutes les valeurs remontent au virtuel. Pour cela, toujours en cliquant sur la roue crantée à droite de cette dernière, onglet *Configuration*:
 
-![saison répétition](../images/saison_repetition.png)
+![saison répétition](images/saison_repetition.png)
