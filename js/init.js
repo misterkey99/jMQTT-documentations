@@ -14,12 +14,15 @@ var docMenu = [
       {
         fr_FR:"Menu1",
         icon:"fas fa-paint-brush",
+        link : "/#LANG#/brother/#VERSION#/m1",
       }, {
         fr_FR:"Menu2",
         icon:"fas fa-cubes",
+        link : "/#LANG#/brother/#VERSION#/m2",
       }, {
         fr_FR:"Menu3",
         icon:"fas fa-object-group",
+        link : "/#LANG#/brother/#VERSION#/m3",
       }
     ]
   }, {
