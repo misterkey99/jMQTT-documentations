@@ -5,7 +5,26 @@ var docMenu = [
   },
   {
     fr_FR : 'jMQTT <img src="/img/jMQTT_icon.png" style="height: 18px;margin: 0 40px 0 0;" />',
-    link : "/#LANG#/jmqtt/index"
+    link : "/#LANG#/jmqtt/index",
+    submenu:[
+      {
+        link : "/#LANG#/core/#VERSION#/changelog",
+        icon:"fas fa-clipboard-list",
+        fr_FR:"Changelog",
+        en_US:"Changelog",
+        es_ES:"Changelog",
+        de_DE:"Changelog",
+        pt_PT:""
+      }, {
+        link : "/#LANG#/core/#VERSION#/dashboard",
+        icon:"fas fa-tachometer-alt",
+        fr_FR:"Dashboard",
+        en_US:"Dashboard",
+        es_ES:"Tablero",
+        de_DE:"Dashboard",
+        pt_PT:""
+      }
+    ]
   },
   /*
   {
@@ -399,17 +418,16 @@ $(function() {
   })
 
   $('#sel_version').on('change',function() {
-    setCookie('version',$(this).val(),7)
-    var url = window.location.href;
-    if (url.indexOf('/core/') != -1 && url.indexOf(getCookie('version')) == -1) {
-      window.location.href =
-      url
-        .replace('3.3',getCookie('version'))
-        .replace('4.0',getCookie('version'))
-        .replace('4.1',getCookie('version'))
-        .replace('4.2',getCookie('version'))
-        .replace('4.3',getCookie('version'))
-        .replace('4.4',getCookie('version'))
+    setCookie('version', $(this).val(), 7)
+    let url = window.location.href;
+    let cookieVersion = getCookie('version');
+    if (url.indexOf('/' + cookieVersion + '/') == -1) {
+      versions.forEach(val => {
+        if (window.location.href.indexOf('/' + val + '/') != -1) {
+          url = url.replace('/' + val + '/', '/' + cookieVersion + '/');
+        }
+      });
+      window.location.href = url;
       return;
     }
     window.location.reload();
