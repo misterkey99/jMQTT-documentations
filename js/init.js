@@ -1,13 +1,14 @@
 var docMenu = [
   {
+    divider : true
+  }, {
     fr_FR : '<img src="/img/brother_icon.png" style="height: 40px;margin: 0 15px 0 5px;" /> Brother',
     link : "/#LANG#/brother/index",
   }, {
     fr_FR:"Documentation",
-    en_US:"Documentation",
+    // en_US:"Documentation",
     // es_ES:"Tablero",
     // de_DE:"Dashboard",
-    // pt_PT:""
     link : "/#LANG#/brother/#VERSION#/index",
     icon:"fas fa-users",
     submenu:[
@@ -27,10 +28,9 @@ var docMenu = [
     ]
   }, {
     fr_FR:"Changelog",
-    en_US:"Changelog",
+    // en_US:"Changelog",
     // es_ES:"Changelog",
     // de_DE:"Changelog",
-    // pt_PT:""
     link : "/#LANG#/brother/#VERSION#/changelog",
     icon:"fas fa-clipboard-list",
   }, {
@@ -46,7 +46,6 @@ var docMenu = [
         en_US:"Documentation",
         // es_ES:"Tablero",
         // de_DE:"Dashboard",
-        // pt_PT:""
       }, {
         link : "/#LANG#/jmqtt/#VERSION#/changelog",
         icon:"fas fa-clipboard-list",
@@ -54,40 +53,17 @@ var docMenu = [
         en_US:"Changelog",
         // es_ES:"Changelog",
         // de_DE:"Changelog",
-        // pt_PT:""
       },
     ]
   },
   /*
   {
-    fr_FR : "Présentation",
-    en_US : "Presentation",
-    es_ES : "Presentación",
-    de_DE : "Präsentation",
-    pt_PT : "Apresentação",
-    link : "/#LANG#/presentation/index"
-  },{
-    fr_FR : "Concepts",
-    en_US : "Concepts",
-    es_ES : "Conceptos",
-    de_DE : "Konzepte",
-    pt_PT : "Conceitos",
-    link : "/#LANG#/concept/"
-  },{
-    fr_FR:'Assistance et bug',
-    en_US : 'Assistance and bug',
-    es_ES : "Asistencia y error",
-    de_DE : "Hilfe und Fehler",
-    pt_PT : "Assistência e bug",
-    link : "/#LANG#/howto/remonter_un_bug"
-  },{
     divider : true
   },{
     fr_FR : "Installer Jeedom",
     en_US : "Install Jeedom",
     es_ES : "Instalar Jeedom",
     de_DE : "Installieren Jeedom",
-    pt_PT : "Instale o Jeedom",
     submenu : [
       {link : "/#LANG#/installation/",fr_FR:"Installation",en_US:"Installation",es_ES:"Instalación",de_DE:"Installation",pt_PT:""},
       {link : "/#LANG#/compatibility/",fr_FR:"Compatibilité matériel et logiciel",en_US:"Compatibilité hardware and software",es_ES:"Compatibilidad de hardware y software.",de_DE:"Hardware und Softwarekompatibilität",pt_PT:""},
@@ -98,7 +74,6 @@ var docMenu = [
     en_US : "Service",
     es_ES : "Servicios",
     de_DE : "Service",
-    pt_PT : "Serviços",
     submenu:[
       {link : "",fr_FR:"Market",en_US:"Market"},
       {link : "/#LANG#/howto/assistant_vocaux_cloud",fr_FR:"Assistant vocaux",en_US:"Voice assistant",es_ES:"Asistente de voz",de_DE:"Sprachassistent",pt_PT:""},
@@ -114,7 +89,6 @@ var docMenu = [
     en_US : "User manual",
     es_ES : "Manual del usuario",
     de_DE : "Benutzerhandbuch",
-    pt_PT : "Manual do usuário",
     submenu:[
       {link : "/#LANG#/core/#VERSION#/changelog",icon:"fas fa-clipboard-list",fr_FR:"Changelog",en_US:"Changelog",es_ES:"Changelog",de_DE:"Changelog",pt_PT:""},
       {link : "/#LANG#/core/#VERSION#/dashboard",icon:"fas fa-tachometer-alt",fr_FR:"Dashboard",en_US:"Dashboard",es_ES:"Tablero",de_DE:"Dashboard",pt_PT:""},
@@ -150,7 +124,6 @@ var docMenu = [
     en_US : "Configuration manual",
     es_ES : "Manual de configuración",
     de_DE : "Konfigurationshandbuch",
-    pt_PT : "",
     submenu:[
       {version : ['3.3'],link:"/#LANG#/core/#VERSION#/administration",icon:"fas fa-wrench",fr_FR:"Administration",en_US:"Administration",es_ES:"Administration",de_DE:"Verwaltung",pt_PT:""},
       {version : ['4.0','4.1','4.2','4.3','4.4'],link:"/#LANG#/core/#VERSION#/administration",icon:"fas fa-wrench",fr_FR:"Configuration",en_US:"Configuration",es_ES:"Configuracion",de_DE:"Konfiguration",pt_PT:"Configuração"},
@@ -169,7 +142,6 @@ var docMenu = [
     en_US : "Official Plugins",
     es_ES : "Plugins Oficiales",
     de_DE : "Offizielle Plugins",
-    pt_PT : "Plugins oficiais",
     submenu:[
       {link:"/#LANG#/plugins/security/",icon:"fas fa-lock",fr_FR:"Sécurité",en_US:"Security",es_ES:"Sécurité",de_DE:"Sicherheit",pt_PT:""},
       {link:"/#LANG#/plugins/automation%20protocol/",icon:"fas fa-rss",fr_FR:"Protocole domotique",en_US:"Home protocol",es_ES:"Protocolo de domótica",de_DE:"Hausautomationsprotokoll",pt_PT:""},
@@ -193,7 +165,6 @@ var docMenu = [
     en_US : "Contributor Plugins",
     es_ES : "Plugins Contribuidor",
     de_DE : "Mitwirkende Plugins",
-    pt_PT : "Plugins Colaboradores",
     submenu:[
       {link:"/#LANG#/plugins_contributor/security/",icon:"fas fa-lock",fr_FR:"Sécurité",en_US:"Security",es_ES:"Sécurité",de_DE:"Sicherheit",pt_PT:""},
       {link:"/#LANG#/plugins_contributor/automation%20protocol/",icon:"fas fa-rss",fr_FR:"Protocole domotique",en_US:"Home protocol",es_ES:"Protocolo de domótica",de_DE:"Hausautomationsprotokoll",pt_PT:""},
@@ -219,7 +190,6 @@ var docMenu = [
     en_US : 'Guides',
     es_ES : "Guides",
     de_DE : "Anleitungen",
-    pt_PT : "Guias",
     submenu:[
       {link:"/#LANG#/howto/",fr_FR:"Tutoriaux",en_US:"Tutorials",es_ES:"Tutoriales",de_DE:"Tutorials",pt_PT:""},
       {link:"/#LANG#/howtoadvance/",fr_FR:"Tutoriaux avancés",en_US:"Advanced tutorials",es_ES:"Tutoriales avanzados",de_DE:"Erweiterte Tutorials",pt_PT:""}
@@ -231,14 +201,12 @@ var docMenu = [
     en_US : "Beta / Alpha",
     es_ES : "Beta / Alpha",
     de_DE : "Beta / Alpha",
-    pt_PT : "Beta / Alpha",
     link : "/#LANG#/beta/"
   },{
     fr_FR:'Développeurs',
     en_US : 'Developers',
     es_ES : "Desarrolladores",
     de_DE : "Entwickler",
-    pt_PT : "Desenvolvedores",
     submenu:[
       {link:"/#LANG#/contribute/",fr_FR:"Contribuer",en_US:"Contribute",es_ES:"Contribuir",de_DE:"Bijdragen",pt_PT:"Contribuir"},
       {link:"/#LANG#/dev/",fr_FR:"Plugins",en_US:"Plugins",es_ES:"Complementos",de_DE:"Plugins",pt_PT:"Plugins"},
@@ -253,7 +221,6 @@ var docMenu = [
     en_US : "Legal Notice",
     es_ES : "Notas legales",
     de_DE : "Introduction",
-    pt_PT : "Rechtliche Hinweise",
     link : "/#LANG#/legal_notice"
   },{
     divider : true
@@ -392,7 +359,7 @@ function genText(_menu,_lang) {
 
 // ----------------------------------------------------------------------------
 $(function() {
-  document.title = 'Documentation Jeedom'
+  document.title = 'Documentation of Bad’s plugins for Jeedom'
   $('.sidenav').sidenav();
   setTimeout(function() {
     if ($('#slide-out').length > 0 && window.matchMedia("only screen and (max-width: 760px)").matches) {
