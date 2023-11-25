@@ -308,11 +308,10 @@ html += '<li class="small"><small>Jeedom: Free, Opened, Cloudless, Multiprotocol
 $('#ul_menu').empty().html(html);
 
 function genText(_menu,_lang) {
+  let _text = _menu[defaultLang];
   if (_menu[lang]) {
-    let _text = _menu[lang];
-  } else {
-    let _text = _menu[defaultLang];
-  }
+    _text = _menu[lang];
+  } 
   if (_menu.icon) {
     return '<i class="'+_menu.icon+'"></i>'+_text;
   } else if (_menu.img) {
