@@ -1,5 +1,16 @@
 var docMenu = [
   {
+    fr_FR : "Brother",
+    link : "/#LANG#/brother/index",
+    img:"/img/brother_icon.png"
+  },
+  {
+    fr_FR : "jMQTT",
+    link : "/#LANG#/jmqtt/index",
+    img:"/img/jMQTT_icon.png"
+  },
+  /*
+  {
     fr_FR : "Présentation",
     en_US : "Presentation",
     es_ES : "Presentación",
@@ -198,6 +209,7 @@ var docMenu = [
   },{
     divider : true
   },
+  */
 ]
 
 if (getUrlVars('theme') == 'light' || getUrlVars('theme') == 'dark') {
@@ -296,10 +308,17 @@ html += '<li class="small"><small>Jeedom: Free, Opened, Cloudless, Multiprotocol
 $('#ul_menu').empty().html(html);
 
 function genText(_menu,_lang) {
-  if (_menu.icon) {
-    return '<i class="'+_menu.icon+'"></i>'+_menu[lang];
+  if (_menu[lang]) {
+    let _text = _menu[lang];
   } else {
-    return _menu[lang];
+    let _text = _menu[defaultLang];
+  }
+  if (_menu.icon) {
+    return '<i class="'+_menu.icon+'"></i>'+_text;
+  } else if (_menu.img) {
+    return '<img src="'+_menu.img+'" style="height: 18px;margin: 0 40px 0 0;" />'+_text;
+  } else {
+    return _text;
   }
 }
 
