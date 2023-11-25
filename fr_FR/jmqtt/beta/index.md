@@ -1,4 +1,3 @@
-
 # Présentation
 
 Le plugin jMQTT permet de connecter Jeedom à un ou plusieurs serveurs MQTT (appelé Broker) afin de recevoir les messages souscrits et de publier ses propres messages.
@@ -722,14 +721,3 @@ En effet, publier le message ON et OFF en Retain permet d'assurer qu'à la recon
 // TODO: Add jMQTT internal and external schematics
 //  labels: documentation, quality
 -->
-# Registres des évolutions
-
-[Evolutions de la branche beta](changelog_beta)
-
-[Evolutions de la branche stable](changelog)
-
-[Evolutions archivées](changelog_archived)
-
-[Documentation de la branche beta](index_beta)
-
-[Documentation de la branche stable](index)

@@ -1,4 +1,4 @@
-# Registre des évolutions BETA
+# Registre des évolutions
 
 ## 2023-11-23 (Beta v23.11.2)
 - Ajout du template pour Tomotics WiFi switch v1 (merci SuperToma)
@@ -34,19 +34,3 @@
 
 ## 2023-09-26 (v22)
 - Passage en stable
-
-
-# Documentations
-
-[Documentation de la branche beta](index_beta)
-
-[Documentation de la branche stable](index)
-
-
-# Autres registres des évolutions
-
-[Evolutions de la branche beta](changelog_beta)
-
-[Evolutions de la branche stable](changelog)
-
-[Evolutions archivées](changelog_archived)
