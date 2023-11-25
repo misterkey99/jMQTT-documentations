@@ -1,13 +1,11 @@
 var docMenu = [
   {
-    fr_FR : "Brother",
-    link : "/#LANG#/brother/index",
-    img:"/img/brother_icon.png"
+    fr_FR : 'Brother <img src="/img/brother_icon.png" style="height: 18px;margin: 0 40px 0 0;" />',
+    link : "/#LANG#/brother/index"
   },
   {
-    fr_FR : "jMQTT",
-    link : "/#LANG#/jmqtt/index",
-    img:"/img/jMQTT_icon.png"
+    fr_FR : 'jMQTT <img src="/img/jMQTT_icon.png" style="height: 18px;margin: 0 40px 0 0;" />',
+    link : "/#LANG#/jmqtt/index"
   },
   /*
   {
@@ -337,8 +335,6 @@ function genText(_menu,_lang) {
   }
   if (_menu.icon) {
     return '<i class="'+_menu.icon+'"></i>'+_text;
-  } else if (_menu.img) {
-    return '<img src="'+_menu.img+'" style="height: 18px;margin: 0 40px 0 0;" />'+_text;
   } else {
     return _text;
   }
