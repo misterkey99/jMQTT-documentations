@@ -155,7 +155,7 @@ input,
   fill: var(--link-color);
 }
 #navTopLeft {
-  background: url("../img/background5.jpg") !important;
+  background: url("../img/background3.jpg") !important;
   background-size: cover !important;
 }
 #navTopLeft a {
