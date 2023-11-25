@@ -294,6 +294,7 @@ if (getCookie('lang') != lang) {
   setCookie('lang', lang, 7);
 }
 $('#meta-lang').attr('content', lang);
+$('#sel_lang').val(lang);
 
 // ----------------------------------------------------------------------------
 var version = null;
@@ -328,17 +329,15 @@ if (getCookie('version') != version) {
 if ($('#sel_version').val() != version) {
   $('#sel_version').val(version);
 }
-$('#sel_lang').val(lang);
 
+// ----------------------------------------------------------------------------
 for (var i in docMenu) {
+  html += '<li>';
   var menu = docMenu[i]
   if (menu.divider) {
-    html += '<li><div class="divider"></div></li>';
+    html += '<div class="divider"></div>';
   } else if (menu.submenu) {
-    html += '<li>';
-    html += '<div class="collapsible-header">'+genText(menu,lang)+'</div>';
-    html += '<div class="collapsible-body">';
-    html += '<ul>';
+    html += '<div class="collapsible-header">'+genText(menu,lang)+'</div><div class="collapsible-body"><ul>';
     for (var j in menu.submenu) {
       var submenu = menu.submenu[j];
       if (submenu.link == '') {
@@ -349,23 +348,23 @@ for (var i in docMenu) {
       }
       html += '<li><a href="'+submenu.link.replace('#LANG#',lang).replace('#VERSION#',version)+'">'+genText(submenu,lang)+'</a></li>';
     }
-    html += '</ul>';
-    html += '</div>';
-    html += '</li>';
+    html += '</ul></div>';
   } else {
     if (menu.link) {
       if (menu.link == '') {
         continue;
       }
-      html += '<li><a href="'+menu.link.replace('#LANG#',lang).replace('#VERSION#',version)+'">'+genText(menu,lang)+'</a></li>';
+      html += '<a href="'+menu.link.replace('#LANG#',lang).replace('#VERSION#',version)+'">'+genText(menu,lang)+'</a>';
     } else {
-      html += '<li><strong style="margin-left:5px;" href="#!">'+genText(menu,lang)+'</strong></li>';
+      html += '<strong style="margin-left:5px;" href="#!">'+genText(menu,lang)+'</strong>';
     }
   }
+  html += '</li>';
 }
-html += '<li class="small"><small>Jeedom: Free, Opened, Cloudless, Multiprotocol solution since 2014</small></li>'
+// html += '<li class="small"><small>Jeedom: Free, Opened, Cloudless, Multiprotocol solution since 2014</small></li>'
 $('#ul_menu').empty().html(html);
 
+// ----------------------------------------------------------------------------
 function genText(_menu,_lang) {
   let _text = _menu[defaultLang];
   if (_menu[lang]) {
@@ -378,6 +377,7 @@ function genText(_menu,_lang) {
   }
 }
 
+// ----------------------------------------------------------------------------
 $(function() {
   document.title = 'Documentation Jeedom'
   $('.sidenav').sidenav();
