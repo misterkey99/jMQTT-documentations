@@ -79,7 +79,9 @@ html.dark {
 html.dark ::-webkit-scrollbar-thumb {
   background: var(--btn-default-color) !important;
 }
-
+html.dark #navTopLeft {
+  filter: invert(1);
+}
 html.dark #logo-container:before {
   content: '';
   display: inline-block;
