@@ -1,5 +1,9 @@
 # Registre des évolutions
 
+## 2023-11-26 (Dev)
+- Suppression de la doc et du changelog de la repository principale
+- Correction des derniers liens restants vers l'ancienne doc et repository
+
 ## 2023-11-25 (Beta v23.11.2)
 - Ajout du template pour Tomotics WiFi switch v1 (merci SuperToma)
 - Ajout du numéro de version réel du plugin dans la page de configuration
