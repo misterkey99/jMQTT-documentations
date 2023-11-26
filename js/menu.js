@@ -77,6 +77,6 @@ var docMenu = [
         fr_FR: "Modifier cette doc",
         en_US: "Edit this doc",
         link: "https://github.com/BadWolf42/documentations/",
-        icon: "fas fa-pen-ruler",
+        icon: "fas fa-edit",
     }
 ]
