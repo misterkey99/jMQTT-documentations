@@ -1,31 +1,6 @@
 var docMenu = [
   {
-    fr_FR : '<img src="/img/brother_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> Brother',
-    link : "/#LANG#/brother/index",
-    submenu:[
-      {
-        fr_FR:"Documentation",
-        // en_US:"Documentation",
-        // es_ES:"Tablero",
-        // de_DE:"Dashboard",
-        link : "/#LANG#/brother/#VERSION#/index",
-        icon:"fas fa-users",
-        submenu:[
-          {
-            fr_FR:"Menu1",
-            icon:"fas fa-paint-brush",
-            link : "/#LANG#/brother/#VERSION#/m1",
-            submenu:[
-              {
-                fr_FR:"Menu1",
-                icon:"fas fa-paint-brush",
-                link : "/#LANG#/brother/#VERSION#/m1",
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    fr_FR : '<img src="/img/brother_icon.png" style="height:40px;margin-right:13px;" /> Brother',
   }, {
     fr_FR:"Documentation",
     // en_US:"Documentation",
@@ -58,16 +33,7 @@ var docMenu = [
   }, {
     divider : true
   }, {
-    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> jMQTT',
-  }, {
-    divider : true
-  }, {
-    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> jMQTT',
-    link : "/#LANG#/jmqtt/index",
-    submenu:[]
-  }, {
-    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> jMQTT',
-    link : "/#LANG#/jmqtt/index",
+    fr_FR : '<img src="/img/jMQTT_icon.png" style="height:40px;margin-right:13px;" /> jMQTT',
   }, {
     fr_FR:"Documentation",
     // en_US:"Documentation",
@@ -388,7 +354,7 @@ function genMenuRec(_menu) {
     } else if (menu.link && menu.link != '') {
       src += '<a href="'+genLink(menu.link)+'">'+genText(menu)+'</a>';
     } else {
-      src += '<div style="padding:0 16px;display:flex;font-weight:bold;">'+genText(menu)+'</div>';
+      src += '<div style="padding:7px 0 0 16px;display:flex;font-weight:bold;">'+genText(menu)+'</div>';
     }
     src += '</li>';
   }
