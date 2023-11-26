@@ -374,7 +374,7 @@ function genLink(_link) {
 function genMenuRec(_menu) {
   let src = '';
   for (let i in _menu) {
-    let menu = docMenu[i]
+    let menu = _menu[i]
     src += '<li>';
     if (menu.divider) {
       src += '<div class="divider"></div>';
@@ -400,7 +400,7 @@ function genMenu(_menu) {
   let src = '';
   for (var i in _menu) {
     src += '<li>';
-    var menu = docMenu[i]
+    var menu = _menu[i]
     if (menu.divider) {
       src += '<div class="divider"></div>';
     } else if (menu.submenu) {
@@ -431,7 +431,8 @@ function genMenu(_menu) {
   return src
 }
 html += genMenuRec(docMenu);
-// html += '<li class="small"><small>Jeedom: Free, Opened, Cloudless, Multiprotocol solution since 2014</small></li>'
+// html += '<li class="small"><small>Jeedom: Free, Open, Cloudless,';
+// html += ' Multiprotocol solution since 2014</small></li>';
 $('#ul_menu').empty().html(html);
 
 // ----------------------------------------------------------------------------
