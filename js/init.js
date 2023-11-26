@@ -58,9 +58,12 @@ var docMenu = [
   }, {
     divider : true
   }, {
-    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 0 13px 0 -2px;" /> jMQTT',
+    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> jMQTT',
     link : "/#LANG#/jmqtt/index",
     submenu:[]
+  }, {
+    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> jMQTT',
+    link : "/#LANG#/jmqtt/index",
   }, {
     fr_FR:"Documentation",
     // en_US:"Documentation",
