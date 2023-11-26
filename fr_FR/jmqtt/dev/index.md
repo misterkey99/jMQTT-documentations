@@ -273,7 +273,7 @@ Concernant les boutons en haut à droite :
   - `Testeur Chemin JSON` permet de tester comment un payload sera traité par un certain chemin JSON ;
   - `Dupliquer` permet de [Dupliquer un équipement](#dupliquer-un-équipement).
 
-### Onglet Commandes - Commandes de type Information
+### Onglet Commandes - Type Information
 
 Les commandes de type information (informations dans la suite) sont créés, automatiquement, uniquement si la case *Ajout automatique des commandes* de l’Onglet Equipement est cochée : lorsque le plugin reçoit un message dont le topic correspond au topic de souscription, il créé alors la commande correspondante lorsque celle-ci est nouvelle.
 
@@ -385,7 +385,7 @@ Si nous rebasculons dans la vue JSON, nous obtenons alors :
 >   * Le nom des commandes peut être modifié comme souhaité, jMQTT se base sur le champ Topic pour associer la bonne valeur.
 >   * Une fois les commandes filles d'une commande JSON créé, il est possible de supprimer la commande mère sans affecter la mise à jour des commandes filles.
 
-### Onglet Commandes - Commandes de type Action
+### Onglet Commandes - Type Action
 
 Les commandes de type action permettent au plugin jMQTT de publier des messages vers le Broker MQTT. Pour cela, créer une commande via le bouton *+ Ajouter une commande action* et remplir les champs selon le besoin :
 
@@ -484,7 +484,7 @@ Ici, la liste de choix est pour les 2 commandes `on|On;auto|Auto;off|Off`. Cette
 >
 > Comme pour le sous-type Curseur, il n'est pas nécessaire ici de préciser `#select#` si c'est la seule valeur à publier, on le voit dans la seconde configuration.
 
-### Onglet Commandes - Vue Classic, vue JSON
+### Onglet Commandes - Vue Classic/JSON
 
 ![Cassic/JSON buttons](images/2022-10-16_classic_json_buttons.png)
 
