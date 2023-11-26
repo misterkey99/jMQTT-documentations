@@ -1,8 +1,30 @@
 var docMenu = [
   {
-    fr_FR : '<img src="/img/brother_icon.png" style="height: 40px;margin: 0 15px 0 5px;" /> Brother',
+    fr_FR : '<img src="/img/brother_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> Brother',
     link : "/#LANG#/brother/index",
-    submenu:[]
+    submenu:[
+      {
+        fr_FR:"Documentation",
+        // en_US:"Documentation",
+        // es_ES:"Tablero",
+        // de_DE:"Dashboard",
+        link : "/#LANG#/brother/#VERSION#/index",
+        icon:"fas fa-users",
+        submenu:[
+          {
+            fr_FR:"Menu1",
+            icon:"fas fa-paint-brush",
+            link : "/#LANG#/brother/#VERSION#/m1",
+            submenu:[
+              {
+                fr_FR:"Menu1",
+                icon:"fas fa-paint-brush",
+                link : "/#LANG#/brother/#VERSION#/m1",
+              }
+            ]
+          }
+      }
+    ]
   }, {
     fr_FR:"Documentation",
     // en_US:"Documentation",
@@ -32,10 +54,10 @@ var docMenu = [
     // de_DE:"Changelog",
     link : "/#LANG#/brother/#VERSION#/changelog",
     icon:"fas fa-clipboard-list",
-  // }, {
-  //   divider : true
   }, {
-    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 15px 0 5px;" /> jMQTT',
+    divider : true
+  }, {
+    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 0 13px 0 -2px;" /> jMQTT',
     link : "/#LANG#/jmqtt/index",
     submenu:[]
   }, {
