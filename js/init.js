@@ -59,6 +59,10 @@ var docMenu = [
     divider : true
   }, {
     fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> jMQTT',
+  }, {
+    divider : true
+  }, {
+    fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 13px 0 -2px;" /> jMQTT',
     link : "/#LANG#/jmqtt/index",
     submenu:[]
   }, {
