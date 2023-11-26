@@ -6,7 +6,7 @@ var docMenu = [
       // en_US:"Documentation",
       link : "/#LANG#/brother/#VERSION#/index",
       version: ['stable', 'beta', 'dev'],
-      icon:"fas fa-users",
+      icon:"fas fa-book",
       // submenu:[
       //   {
       //     fr_FR:"Menu1",
@@ -28,6 +28,14 @@ var docMenu = [
       version: ['stable', 'beta', 'dev'],
       icon:"fas fa-clipboard-list",
     }, {
+      fr_FR:"Github",
+      link : "https://github.com/BadWolf42/plugin-brother",
+      icon:"fas fa-code-branch",
+    }, {
+      fr_FR:"Community",
+      link : "https://community.jeedom.com/tag/plugin-brother",
+      icon:"fas fa-users",
+    }, {
       divider : true
     }, {
       fr_FR : '<img src="/img/jMQTT_icon.png" style="height:40px;margin-right:13px;" /> jMQTT',
@@ -35,7 +43,7 @@ var docMenu = [
       fr_FR:"Documentation",
       // en_US:"Documentation",
       link : "/#LANG#/jmqtt/#VERSION#/index",
-      icon:"fas fa-users",
+      icon:"fas fa-book",
       // submenu:[
       //   {
       //     fr_FR:"Menu1",
@@ -56,6 +64,14 @@ var docMenu = [
       link : "/#LANG#/jmqtt/#VERSION#/changelog",
       icon:"fas fa-clipboard-list",
     }, {
-      divider : true
+      fr_FR:"Github",
+      link : "https://github.com/BadWolf42/jMQTT/",
+      icon:"fas fa-code-branch",
+    }, {
+      fr_FR:"Community",
+      link : "https://community.jeedom.com/tag/plugin-jmqtt",
+      icon:"fas fa-users",
+    }, {
+          divider : true
     }
   ]
