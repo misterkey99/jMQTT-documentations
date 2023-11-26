@@ -1,9 +1,8 @@
 var docMenu = [
   {
-    divider : true
-  }, {
     fr_FR : '<img src="/img/brother_icon.png" style="height: 40px;margin: 0 15px 0 5px;" /> Brother',
     link : "/#LANG#/brother/index",
+    submenu:[]
   }, {
     fr_FR:"Documentation",
     // en_US:"Documentation",
@@ -33,28 +32,41 @@ var docMenu = [
     // de_DE:"Changelog",
     link : "/#LANG#/brother/#VERSION#/changelog",
     icon:"fas fa-clipboard-list",
-  }, {
-    divider : true
+  // }, {
+  //   divider : true
   }, {
     fr_FR : '<img src="/img/jMQTT_icon.png" style="height: 40px;margin: 0 15px 0 5px;" /> jMQTT',
     link : "/#LANG#/jmqtt/index",
+    submenu:[]
+  }, {
+    fr_FR:"Documentation",
+    // en_US:"Documentation",
+    // es_ES:"Tablero",
+    // de_DE:"Dashboard",
+    link : "/#LANG#/jmqtt/#VERSION#/index",
+    icon:"fas fa-users",
     submenu:[
       {
-        link : "/#LANG#/jmqtt/#VERSION#/index",
-        icon:"fas fa-users",
-        fr_FR:"Documentation",
-        en_US:"Documentation",
-        // es_ES:"Tablero",
-        // de_DE:"Dashboard",
+        fr_FR:"Menu1",
+        icon:"fas fa-paint-brush",
+        link : "/#LANG#/jmqtt/#VERSION#/m1",
       }, {
-        link : "/#LANG#/jmqtt/#VERSION#/changelog",
-        icon:"fas fa-clipboard-list",
-        fr_FR:"Changelog",
-        en_US:"Changelog",
-        // es_ES:"Changelog",
-        // de_DE:"Changelog",
-      },
+        fr_FR:"Menu2",
+        icon:"fas fa-cubes",
+        link : "/#LANG#/jmqtt/#VERSION#/m2",
+      }, {
+        fr_FR:"Menu3",
+        icon:"fas fa-object-group",
+        link : "/#LANG#/jmqtt/#VERSION#/m3",
+      }
     ]
+  }, {
+    fr_FR:"Changelog",
+    // en_US:"Changelog",
+    // es_ES:"Changelog",
+    // de_DE:"Changelog",
+    link : "/#LANG#/jmqtt/#VERSION#/changelog",
+    icon:"fas fa-clipboard-list",
   },
   /*
   {
