@@ -7,6 +7,7 @@ var docMenu = [
     // es_ES:"Tablero",
     // de_DE:"Dashboard",
     link : "/#LANG#/brother/#VERSION#/index",
+    version: ['stable', 'beta', 'dev'],
     icon:"fas fa-users",
     // submenu:[
     //   {
@@ -29,6 +30,7 @@ var docMenu = [
     // es_ES:"Changelog",
     // de_DE:"Changelog",
     link : "/#LANG#/brother/#VERSION#/changelog",
+    version: ['stable', 'beta', 'dev'],
     icon:"fas fa-clipboard-list",
   }, {
     divider : true
