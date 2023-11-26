@@ -349,41 +349,7 @@ if ($('#sel_version').val() != version) {
 }
 
 // ----------------------------------------------------------------------------
-for (var i in docMenu) {
-  html += '<li>';
-  var menu = docMenu[i]
-  if (menu.divider) {
-    html += '<div class="divider"></div>';
-  } else if (menu.submenu) {
-    html += '<div class="collapsible-header">'+genText(menu,lang)+'</div><div class="collapsible-body"><ul>';
-    for (var j in menu.submenu) {
-      var submenu = menu.submenu[j];
-      if (submenu.link == '') {
-        continue;
-      }
-      if (submenu.version && submenu.version.indexOf(version) == -1) {
-        continue;
-      }
-      html += '<li><a href="'+submenu.link.replace('#LANG#',lang).replace('#VERSION#',version)+'">'+genText(submenu,lang)+'</a></li>';
-    }
-    html += '</ul></div>';
-  } else {
-    if (menu.link) {
-      if (menu.link == '') {
-        continue;
-      }
-      html += '<a href="'+menu.link.replace('#LANG#',lang).replace('#VERSION#',version)+'">'+genText(menu,lang)+'</a>';
-    } else {
-      html += '<strong style="margin-left:5px;" href="#!">'+genText(menu,lang)+'</strong>';
-    }
-  }
-  html += '</li>';
-}
-// html += '<li class="small"><small>Jeedom: Free, Opened, Cloudless, Multiprotocol solution since 2014</small></li>'
-$('#ul_menu').empty().html(html);
-
-// ----------------------------------------------------------------------------
-function genText(_menu,_lang) {
+function genText(_menu) {
   let _text = _menu[defaultLang];
   if (_menu[lang]) {
     _text = _menu[lang];
@@ -394,6 +360,75 @@ function genText(_menu,_lang) {
     return _text;
   }
 }
+
+// ----------------------------------------------------------------------------
+function genLink(_link) {
+    return _link.replace('#LANG#', lang).replace('#VERSION#', version);
+}
+
+// ----------------------------------------------------------------------------
+function genMenuRec(_menu) {
+  let src = '';
+  for (let i in _menu) {
+    let menu = docMenu[i]
+    src += '<li>';
+    if (menu.divider) {
+      src += '<div class="divider"></div>';
+    } else if (menu.version && menu.version.indexOf(version) == -1) {
+      continue;
+    } else if (menu.submenu) {
+      src += '<div class="collapsible-header">'+genText(menu)+'</div>';
+      src += '<div class="collapsible-body"><ul>';
+      src += genMenuRec(menu.submenu)
+      src += '</ul></div>';
+    } else if (menu.link && menu.link != '') {
+      src += '<a href="'+genLink(menu.link)+'">'+genText(menu)+'</a>';
+    } else {
+      src += '<strong style="margin-left:5px;" href="#!">'+genText(menu)+'</strong>';
+    }
+    src += '</li>';
+  }
+  return src
+}
+
+// ----------------------------------------------------------------------------
+function genMenu(_menu) {
+  let src = '';
+  for (var i in _menu) {
+    src += '<li>';
+    var menu = docMenu[i]
+    if (menu.divider) {
+      src += '<div class="divider"></div>';
+    } else if (menu.submenu) {
+      src += '<div class="collapsible-header">'+genText(menu)+'</div><div class="collapsible-body"><ul>';
+      for (var j in menu.submenu) {
+        var submenu = menu.submenu[j];
+        if (submenu.link == '') {
+          continue;
+        }
+        if (submenu.version && submenu.version.indexOf(version) == -1) {
+          continue;
+        }
+        src += '<li><a href="'+genLink(submenu.link)+'">'+genText(submenu)+'</a></li>';
+      }
+      src += '</ul></div>';
+    } else {
+      if (menu.link) {
+        if (menu.link == '') {
+          continue;
+        }
+        src += '<a href="'+genLink(menu.link)+'">'+genText(menu)+'</a>';
+      } else {
+        src += '<strong style="margin-left:5px;" href="#!">'+genText(menu)+'</strong>';
+      }
+    }
+    src += '</li>';
+  }
+  return src
+}
+html += genMenuRec(docMenu);
+// html += '<li class="small"><small>Jeedom: Free, Opened, Cloudless, Multiprotocol solution since 2014</small></li>'
+$('#ul_menu').empty().html(html);
 
 // ----------------------------------------------------------------------------
 $(function() {
