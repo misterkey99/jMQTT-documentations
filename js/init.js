@@ -29,7 +29,7 @@ var docMenu = [
     // en_US:"Changelog",
     // es_ES:"Changelog",
     // de_DE:"Changelog",
-    link : "/#LANG#/brother/#VERSION#/changelog",
+    link : "/#LANG#/brother/changelog",
     version: ['stable', 'beta', 'dev'],
     icon:"fas fa-clipboard-list",
   }, {
