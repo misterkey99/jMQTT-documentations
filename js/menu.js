@@ -69,7 +69,13 @@ var docMenu = [
         // ]
     }, {
         fr_FR: "Changelog",
-        link: "/#LANG#/jmqtt/#VERSION#/changelog",
+        link: "/#LANG#/jmqtt/changelog",
+        version: ['stable', 'beta', 'dev'],
+        icon: "fas fa-clipboard-list",
+    }, {
+        fr_FR: "Changelog",
+        link: "/#LANG#/jmqtt/v3/changelog",
+        version: ['v3'],
         icon: "fas fa-clipboard-list",
     }, {
         fr_FR: "Community",
