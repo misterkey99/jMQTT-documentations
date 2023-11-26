@@ -5,17 +5,20 @@
 >As a reminder if there is no information on the update, it means that it only concerns the updating of documentation, translation or text.
 
 
-# Stable - 01/10/2023 (v6)
+# Stable - 2023-11-26 (v6)
+- Outsourcing of documentation and changelog
+
+# Stable - 2023-10-01 (v6)
 - Last Beta is now Stable
 
-# Beta - 29/09/2023 (v6)
+# Beta - 2023-09-29 (v6)
 - Fixed issue with [pyasn1 package](https://community.jeedom.com/t/107671) (using a Python3 venv)
 - Fix some log levels (too verbose)
 
-# Stable - 14/05/2023 (v5)
+# Stable - 2023-05-14 (v5)
 - Fixed issues with widget on Jeedom 4.4
 
-# Stable - 30/04/2023 (v4)
+# Stable - 2023-04-30 (v4)
 - **The widget on the Dashboard is now updated when changing a value**
 - **Logo update, using yellow instead of dark blue**
 - **Minimum version support is now Jeedom 4.3**
@@ -28,49 +31,49 @@
 - Fixed PHP Notice when printer was turned on
 - Fixed some typos
 
-# Beta - 27/02/2023
+# Beta - 2023-02-27
 - Updated Equipment Commands tab in Jeedom 4.3 style
 - Fixed "None" item was missing on Equipment tab of equipments
 - Fixed PHP Notice when printer was turned on
 - Fixed some typos
 
-# Stable - 20/02/2023
+# Stable - 2023-02-20
 - **Plugin taken over by BadWolf**
 - Change in the way refresh works: a callback is used to avoid creating a cron
 - Renamed the "master" branch to "stable", to those who use Github and not the Market, please update your branch
 - Added usage statistics
 - Code indentation/cleanup
 
-# Beta - 14/02/2023
+# Beta - 2023-02-14
 - **Plugin taken over by BadWolf**
 - Added usage statistics
 - Code indentation/cleanup
 
-# Stable - 04/03/2022
+# Stable - 2022-02-04
 - Logs typo fix
 - Useless sudo rights removal
 - Manual refresh in cron to prevent UI lock
 - Compatibility with tile background graphics
 
-# Stable - 18/02/2022
+# Stable - 2022-02-18
 - Fix on last prints computation
 
-# Stable - 12/02/2022
+# Stable - 2022-02-12
 - First stable version
 
-# Beta - 11/02/2022
+# Beta - 2022-02-11
 - Python package logging level respect Jeedom logging config
 - Gauge items clickable for history
 - Grey background on gauge for better visibility of black ink
 
-# Beta - 10/02/2022
+# Beta - 2022-02-10
 - Choice of printer's type (color or back & white)
 - Smaller widget with status and page counters information
 - Widget compatible with visible status of commands
 
-# Beta - 07/02/2022
+# Beta - 2022-02-07
 - Add logs
 - New commands for number of prints in the last hour
 
-# Beta - 06/02/2022
+# Beta - 2022-02-06
 - Initial revision (beta)
