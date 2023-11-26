@@ -32,15 +32,15 @@ var docMenu = [
         icon: "fas fa-clipboard-list",
     }, {
         fr_FR: "Community",
-        link: "https://community.jeedom.com/tag/plugin-brother",
+        link: "https://community.jeedom.com/tag/plugin-brother\" target=\"_blank",
         icon: "fas fa-users",
     }, {
         fr_FR: "Market Jeedom",
-        link: "https://market.jeedom.com/index.php?v=d&p=market_display&id=4266",
+        link: "https://market.jeedom.com/index.php?v=d&p=market_display&id=4266\" target=\"_blank",
         icon: "fas fa-shopping-cart",
     }, {
         fr_FR: "Github",
-        link: "https://github.com/BadWolf42/plugin-brother",
+        link: "https://github.com/BadWolf42/plugin-brother\" target=\"_blank",
         icon: "fas fa-code-branch",
     }, {
         // --------------------------------------------------------------------
@@ -73,15 +73,15 @@ var docMenu = [
         icon: "fas fa-clipboard-list",
     }, {
         fr_FR: "Community",
-        link: "https://community.jeedom.com/tag/plugin-jmqtt",
+        link: "https://community.jeedom.com/tag/plugin-jmqtt\" target=\"_blank",
         icon: "fas fa-users",
     }, {
         fr_FR: "Market Jeedom",
-        link: "https://market.jeedom.com/index.php?v=d&p=market_display&id=3166",
+        link: "https://market.jeedom.com/index.php?v=d&p=market_display&id=3166\" target=\"_blank",
         icon: "fas fa-shopping-cart",
     }, {
         fr_FR: "Github",
-        link: "https://github.com/BadWolf42/jMQTT/",
+        link: "https://github.com/BadWolf42/jMQTT/\" target=\"_blank",
         icon: "fas fa-code-branch",
     }, {
         // --------------------------------------------------------------------
@@ -89,7 +89,7 @@ var docMenu = [
     }, {
         fr_FR: "Modifier cette doc",
         en_US: "Edit this doc",
-        link: "https://github.com/BadWolf42/documentations/",
+        link: "https://github.com/BadWolf42/documentations/\" target=\"_blank",
         icon: "fas fa-edit",
     }
 ]
