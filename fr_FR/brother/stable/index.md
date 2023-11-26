@@ -4,7 +4,7 @@ Plugin récupérant les informations de votre imprimante connectée Brother en u
 
 Plusieurs commandes sont disponibles comme les différents niveaux d'encre.
 
->**Important**      
+>**Important**
 >Votre imprimante doit :
 - être une Brother :)
 - être connectée à votre réseau local
@@ -20,7 +20,7 @@ Le plugin **Brother** ne requiert aucune configuration particulière et doit jus
 
 Pour accéder aux différents équipements **Brother**, ouvrez le menu **Plugins → Monitoring → Brother**.
 
-> **A savoir**    
+> **A savoir**
 > Le bouton **Ajouter**, vous permet de créer une nouvelle imprimants **Brother**.
 
 Sur la page de l'équipement, renseignez **l'adresse IP ou le nom d'hôte** de votre imprimante et sélectionnez son type, puis cliquez sur **Sauvegarder**.
@@ -33,7 +33,7 @@ Très probablement, certaines imprimantes Brother ne seront pas compatibles. Ess
 
 # Contributions
 
-Ce plugin gratuit est ouvert à contributions (améliorations et/ou corrections). N'hésitez pas à soumettre vos pull-requests sur <a href="https://github.com/badwolf42/plugin-brother" target="_blank">Github</a>.
+Ce plugin gratuit est ouvert à contributions (améliorations et/ou corrections). N'hésitez pas à soumettre vos pull-requests sur <a href="https://github.com/badwolf42/plugin-brother/issues" target="_blank">Github</a>.
 
 # Credits
 

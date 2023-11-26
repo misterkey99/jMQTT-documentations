@@ -2,9 +2,9 @@
 
 Plugin gathering information from your network connected Brother printer using SNMP protocol.
 
-Several commands are availale like the different ink/toner levels. 
+Several commands are availale like the different ink/toner levels.
 
->**Important**      
+>**Important**
 >You printer must be:
 - a Brother one :)
 - connected to your local network
@@ -20,7 +20,7 @@ The plugin **Brother** does not require any specific configuration and should on
 
 To access the different equipment **Brother**, go to the menu **Plugins → Monitoring → Brother**.
 
-> **To know**    
+> **To know**
 > The button **+ Add** allows you to add a printer **Brother**.
 
 On the equipment page, fill in the **hostname or IP address** of your printer and select its **type**, then click on the button **Save**.
@@ -33,7 +33,7 @@ Most probably, some Brother printers might not be compatible. Just try and see!
 
 # Contributions
 
-This plugin is opened for contributions and even encouraged! Please submit your pull requests for improvements/fixes on <a href="https://github.com/badwolf42/plugin-brother" target="_blank">Github</a>
+This plugin is opened for contributions and even encouraged! Please submit your pull requests for improvements/fixes on <a href="https://github.com/badwolf42/plugin-brother/issues" target="_blank">Github</a>
 
 # Credits
 
