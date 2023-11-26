@@ -1,20 +1,5 @@
 <!--
-  Thanks for your contribution to make Jeedom better!
+  Thanks for your contribution to make this documentations better!
 
-  Read contribute documentation before proposing PR.
-  Documentation involve several automated processed and not all documentation can be edited here.
-  Plugins needs PR on the plugin repository.
-  Core documentation PR must apply on Core repository.
+  Plugin code needs to be PRed on the repository of the corresponding plugin.
 -->
-
-
-## Documentation
-
-[contribute](https://doc.jeedom.com/en_US/contribute/)
-
-<!--
-  Some useful links for contributors
--->
-[beta-testing](https://doc.jeedom.com/en_US/beta/)
-[community](https://community.jeedom.com/)
-[plugins](https://doc.jeedom.com/en_US/dev/)
