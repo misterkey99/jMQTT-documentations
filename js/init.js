@@ -388,48 +388,13 @@ function genMenuRec(_menu) {
     } else if (menu.link && menu.link != '') {
       src += '<a href="'+genLink(menu.link)+'">'+genText(menu)+'</a>';
     } else {
-      src += '<strong style="margin-left:5px;" href="#!">'+genText(menu)+'</strong>';
+      src += '<div style="padding:0 16px;display:flex;font-weight:bold;">'+genText(menu)+'</div>';
     }
     src += '</li>';
   }
   return src
 }
 
-// ----------------------------------------------------------------------------
-function genMenu(_menu) {
-  let src = '';
-  for (var i in _menu) {
-    src += '<li>';
-    var menu = _menu[i]
-    if (menu.divider) {
-      src += '<div class="divider"></div>';
-    } else if (menu.submenu) {
-      src += '<div class="collapsible-header">'+genText(menu)+'</div><div class="collapsible-body"><ul>';
-      for (var j in menu.submenu) {
-        var submenu = menu.submenu[j];
-        if (submenu.link == '') {
-          continue;
-        }
-        if (submenu.version && submenu.version.indexOf(version) == -1) {
-          continue;
-        }
-        src += '<li><a href="'+genLink(submenu.link)+'">'+genText(submenu)+'</a></li>';
-      }
-      src += '</ul></div>';
-    } else {
-      if (menu.link) {
-        if (menu.link == '') {
-          continue;
-        }
-        src += '<a href="'+genLink(menu.link)+'">'+genText(menu)+'</a>';
-      } else {
-        src += '<strong style="margin-left:5px;" href="#!">'+genText(menu)+'</strong>';
-      }
-    }
-    src += '</li>';
-  }
-  return src
-}
 html += genMenuRec(docMenu);
 // html += '<li class="small"><small>Jeedom: Free, Open, Cloudless,';
 // html += ' Multiprotocol solution since 2014</small></li>';
