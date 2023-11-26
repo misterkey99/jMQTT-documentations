@@ -31,13 +31,17 @@ var docMenu = [
         version: ['stable', 'beta', 'dev'],
         icon: "fas fa-clipboard-list",
     }, {
-        fr_FR: "Github",
-        link: "https://github.com/BadWolf42/plugin-brother",
-        icon: "fas fa-code-branch",
-    }, {
         fr_FR: "Community",
         link: "https://community.jeedom.com/tag/plugin-brother",
         icon: "fas fa-users",
+    }, {
+        fr_FR: "Market Jeedom",
+        link: "https://market.jeedom.com/index.php?v=d&p=market_display&id=4266",
+        icon: "fas fa-shopping-cart",
+    }, {
+        fr_FR: "Github",
+        link: "https://github.com/BadWolf42/plugin-brother",
+        icon: "fas fa-code-branch",
     }, {
         // --------------------------------------------------------------------
         divider: true
@@ -68,13 +72,17 @@ var docMenu = [
         link: "/#LANG#/jmqtt/#VERSION#/changelog",
         icon: "fas fa-clipboard-list",
     }, {
-        fr_FR: "Github",
-        link: "https://github.com/BadWolf42/jMQTT/",
-        icon: "fas fa-code-branch",
-    }, {
         fr_FR: "Community",
         link: "https://community.jeedom.com/tag/plugin-jmqtt",
         icon: "fas fa-users",
+    }, {
+        fr_FR: "Market Jeedom",
+        link: "https://market.jeedom.com/index.php?v=d&p=market_display&id=3166",
+        icon: "fas fa-shopping-cart",
+    }, {
+        fr_FR: "Github",
+        link: "https://github.com/BadWolf42/jMQTT/",
+        icon: "fas fa-code-branch",
     }, {
         // --------------------------------------------------------------------
         divider: true
