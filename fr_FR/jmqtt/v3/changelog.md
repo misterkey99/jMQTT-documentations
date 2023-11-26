@@ -1,5 +1,3 @@
-# Registre des évolutions
-
 ## 2023-11-26 (v10.1.0)
  - Mise à jour des liens vers la documentation suite au changement de propriétaire du plugin
 

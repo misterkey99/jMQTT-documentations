@@ -1,5 +1,3 @@
-# Changelog
-
 ## 2023-11-26 (v7 Stable & Beta)
 - Externalisation de la documentation et du changelog
 

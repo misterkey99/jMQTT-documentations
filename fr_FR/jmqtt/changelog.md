@@ -1,5 +1,3 @@
-# Registre des évolutions
-
 ## 2023-11-26 (Dev)
 - Suppression de la doc et du changelog de la repository principale
 - Correction des derniers liens restants vers l'ancienne doc et repository
