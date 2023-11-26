@@ -166,7 +166,7 @@ Dans le premier onglet d’un équipement jMQTT, nous trouvons les paramètres c
 
   - _Broker associé_ : Broker auquel est associé l'équipement. **Attention**: ne modifier ce paramètre qu'en sachant bien ce que vous faites ;
 
-  - _Inscrit au Topic_ : topic de souscription auprès du Broker MQTT. Pour un équipement de type Broker, ce paramètre n'est pas modifiable, il est imposé par l'identifiant de connexion au Broker, voir [Onglet Broker](#onglet-Broker) ;
+  - _Inscrit au Topic_ : topic de souscription auprès du Broker MQTT. Pour un équipement de type Broker, ce paramètre n'est pas modifiable, il est imposé par l'Identifiant de Connexion au Broker, voir [Onglet Broker](#onglet-Broker) ;
 
   - _Ajout automatique des commandes_ : si coché, les [commandes de type information](#commandes-de-type-information) seront automatiquement créés par le plugin, et l’équipement apparaitra avec une petite icône d’inclusion superposé dans la page de [Gestion des équipements](#gestion-des-équipements). La case est cochée par défaut ;
 
@@ -503,7 +503,7 @@ Aujourd'hui, le démon est automatiquement informé que le niveau de log a chang
 
 ## Le démon se déconnecte avec le message "Erreur sur jMQTT::daemon() : The connection was lost."
 
-Vérifier qu’il n’y a pas 2 clients ayant le même identifiant, voir *Identifiant de connexion* dans l'[onglet Broker](#onglet-Broker) de l'équipement Broker concerné.
+Vérifier qu’il n’y a pas 2 clients ayant le même identifiant, voir *Identifiant de Connexion* dans l'[onglet Broker](#onglet-Broker) de l'équipement Broker concerné.
 
 # Problèmes inconnus
 

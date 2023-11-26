@@ -178,7 +178,7 @@ Pour modifier les informations de connexion au Broker, les paramètres sont :
     - _Clé Privée Client_ : visible si Certificat Client rempli, sélectionne la Clé Privée du Client permettant de discuter avec le Broker.
       Cette clé privée client est le pendant du certificat client ci-dessus, si l'un est fourni l'autre est obligatoire.
 
-> **Attention**: _L'identifiant de connexion_ doit être unique par client par Broker. Sinon les clients portant le même identifiant vont se déconnecter mutuellement.
+> **Attention**: _Le Client-Id_ doit être unique par client par Broker. Sinon les clients portant le même identifiant vont se déconnecter mutuellement.
 
 Une aide contextuelle est également disponible pour chaque champ.
 Il est possible d'importer les certificats en déposant les fichiers sur les champs ou avec les boutons à leur droite.
@@ -249,7 +249,7 @@ Les **équipements "classiques"** portent les commandes info qui récupéreront 
 
 Dans le premier onglet d’un équipement jMQTT, nous trouvons les paramètres communs aux autres équipements Jeedom, ainsi que cinq paramètres spécifiques au plugin :
   - _Broker associé_ : Broker auquel est associé l'équipement. **Attention**: ne modifier ce paramètre qu'en sachant bien ce que vous faites ;
-  - _Inscrit au Topic_ : topic de souscription auprès du Broker MQTT. Pour un équipement de type Broker, ce paramètre n'est pas modifiable, il est imposé par l'identifiant de connexion au Broker, voir [Onglet Broker](#onglet-Broker) ;
+  - _Inscrit au Topic_ : topic de souscription auprès du Broker MQTT. Pour un équipement de type Broker, ce paramètre n'est pas modifiable, il est imposé par le Client-Id au Broker, voir [Onglet Broker](#onglet-Broker) ;
   - _Ajout automatique des commandes_ : si coché, les [commandes de type information](#commandes-de-type-information) seront automatiquement créés par le plugin, et l’équipement apparaitra avec une petite icône d’inclusion superposé dans la page de [Gestion des équipements](#gestion-des-équipements). La case est cochée par défaut ;
   - _Qos_ : qualité de service souscrit ;
   - _Type d'alimentation_ : paramètre libre vous permettant de préciser le type d'alimentation de l'équipement (non disponible pour un équipement Broker) ;
@@ -649,7 +649,7 @@ Pour cela, il fallait désactiver puis réactiver l'équipement Broker concerné
 
 ## Le démon se déconnecte avec le message "Erreur sur jMQTT::daemon() : The connection was lost."
 
-Vérifier qu’il n’y a pas 2 clients ayant le même identifiant, voir *Identifiant de connexion* dans l'[onglet Broker](#onglet-Broker) de l'équipement Broker concerné.
+Vérifier qu’il n’y a pas 2 clients ayant le même identifiant, voir *Client-Id* dans l'[onglet Broker](#onglet-Broker) de l'équipement Broker concerné.
 
 # Problèmes inconnus
 
