@@ -1,6 +1,9 @@
 # Registre des évolutions
 
-## 2022-10-15
+## 2023-11-26 (v10.1.0)
+ - Mise à jour des liens vers la documentation suite au changement de propriétaire du plugin
+
+## 2022-10-15 (v10)
  - Création d'une branche spéciale pour Jeedom 3 (il n'y aura plus de mise à jour dans le futur)
  - Mise en place d'un bandeau indiquant que Jeedom 3 ne sera plus supporté par les prochaines versions
  - Correction des derniers problèmes de compatibilité avec Jeedom 3.3
