@@ -1,5 +1,8 @@
 var docMenu = [
     {
+        // --------------------------------------------------------------------
+        divider: true
+    }, {
         fr_FR: '<img src="/img/brother_icon.png" style="height:40px;margin-right:13px;" /> Brother',
     }, {
         fr_FR: "Documentation",
@@ -36,6 +39,7 @@ var docMenu = [
         link: "https://community.jeedom.com/tag/plugin-brother",
         icon: "fas fa-users",
     }, {
+        // --------------------------------------------------------------------
         divider: true
     }, {
         fr_FR: '<img src="/img/jMQTT_icon.png" style="height:40px;margin-right:13px;" /> jMQTT',
@@ -72,6 +76,7 @@ var docMenu = [
         link: "https://community.jeedom.com/tag/plugin-jmqtt",
         icon: "fas fa-users",
     }, {
+        // --------------------------------------------------------------------
         divider: true
     }, {
         fr_FR: "Modifier cette doc",
