@@ -1,10 +1,10 @@
-## 2023-11-26 (Dev)
+## 2023-12-01 (v23.11.3 - Stable & Beta)
 - Suppression de la doc et du changelog de la repository principale
 - Correction des derniers liens restants vers l'ancienne doc et repository
 - Correction du template Shelly Plus Plug S (merci mld.sebastien, nebz, Jeandhom et Furaxworld)
 - Qualité du code : Regroupement des fichiers de PHPStan (tests statiques PHP)
 
-## 2023-11-25 (v23.11.2 Beta)
+## 2023-11-25 (v23.11.2 - Beta)
 - Ajout du template pour Tomotics WiFi switch v1 (merci SuperToma)
 - Ajout du numéro de version réel du plugin dans la page de configuration
 - Ajout d'un bouton pour accéder aux avis sur le plugin
@@ -14,13 +14,13 @@
 - Mise à jour de captures d'écran dans la documentation
 - Mise à jour de traductions
 
-## 2023-11-21 (v23.11.1)
+## 2023-11-21 (v23.11.1 - Beta)
 - Correction du tri par ordre alphabétique des icones des équipements
 - Correction de l'affichage de la modale de gestion des templates
 - Qualité du code : "Type hinting" autant que possible
 - Ajout d'informations supplémentaires lors de la création d'un sujet Community (v4.4)
 
-## 2023-11-19 (v23.11.0)
+## 2023-11-19 (v23.11.0 - Beta)
 - Correction des anciennes références au GitHub de Domochip
 - Correction du Testeur de Chemin Json : nettoyage du champ de résultat
 - Correction de l’ajout automatique de commandes (merci Math82)
@@ -39,10 +39,10 @@
 - Qualité du code : Suppression de `jMQTTCmd::checkCmdName()` (inutilisé)
 - Qualité du code : Optimisations de `jMQTT::setType()` & `jMQTT::getType()`
 
-## 2023-09-26 (v22 Stable)
+## 2023-09-26 (v22 - Stable & Beta)
 - Correction d'un bug du mode Temps Réel pouvant crasher le Démon (cf : https://community.jeedom.com/t/112665)
 
-## 2023-09-25 (v21)
+## 2023-09-25 (v21 - Stable & Beta)
 - Ajout du bouton Community (uniquement pour Jeedom v4.4+)
 - Ajout du template nécessaire au plugin MCZRemote
 - Correction de multiples avertissements lors de la sauvegarde d'un équipement en v4.4
@@ -50,7 +50,7 @@
 - Correction de certains log peu explicites
 - Préparation pour PHP > 7.4
 
-## 2023-09-04 (v20)
+## 2023-09-04 (v20 - Stable & Beta)
 - Suppression de la QoS sur les équipements Broker (car inutilisée)
 - Remplacement de la fonction `loadPage()` par `jeedomUtils.loadPage()` (introduite en 4.2 et dépréciée en v4.4)
 - Ajout de 3 nouveaux templates Shelly : Flood, Vintage et Plus Plug S (merci Nebz et samud)
@@ -61,7 +61,7 @@
 - Ajout de nouvelles fonctions de debug avancé
 - Optimisation de la taille des icones
 
-## 2023-07-15 (v19)
+## 2023-07-15 (v19 - Stable & Beta)
 - Ajout de tags utilisables dans les payload des commandes action (cf : https://community.jeedom.com/t/tag-topic/108883)
 - **Correction d'un plantage du démon lors de la publication sur un topic contenant `#` ou `?`**
 - Avertissement en cas de mauvais topic de publication
@@ -72,10 +72,10 @@
 - Ajout du template pour le Nuki Smart Lock (merci ludomin & JC38)
 - Ajout de nouvelles fonctions de debug avancé
 
-## 2023-06-05 (v18)
+## 2023-06-05 (v18 - Stable & Beta)
 - Correction mineure (erreur dans les logs)
 
-## 2023-05-21 (v17 beta)
+## 2023-05-21 (v17 - Beta)
 - **Ajout d'un champ pour configurer la durée du mode Temps Réel**
 - **Changement du timeout du démon de 135s à 300s**
 - Transformation des boutons en icones en haut à droite (à côté du bouton Sauvegarder)
@@ -91,10 +91,10 @@
 - Optimisations du code, corrections syntaxiques et orthographiques (merci Furaxworld)
 - Mise à jour de la documentation
 
-## 2023-04-15 (v16)
+## 2023-04-15 (v16 - Stable & Beta)
 - Correction de bugs mineur (sur le système de sauvegarde)
 
-## 2023-04-11 (v15 beta)
+## 2023-04-11 (v15 - Beta)
 - Correction d'un problème créant des commandes orphelines lors de la suppression d'un équipement Broker
 - Correction des problèmes de multi-lancement du démon avec des signaux de vie entre le démon et Jeedom
 - Correction d'un problème d'affichage et de gestion des équipements orphelins sur la page principale du plugin
@@ -108,7 +108,7 @@
 - Optimisations du code, corrections syntaxiques et orthographiques
 - Mise à jour de la documentation
 
-## 2023-03-19 (v14 beta)
+## 2023-03-19 (v14 - Beta)
 - **Ajout de la possibilité d'utiliser un template lors de la création d'un équipement (merci ngrataloup)**
 - Ajout d'une alerte lorsqu'un message met trop de temps à être traité par Jeedom (merci rennais35000)
 - Ajout du template Shelly 4 Pro PM (merci Furaxworld)
@@ -122,7 +122,7 @@
 - Nouveau système de mise à jour des objets entre les versions
 - Corrections syntaxiques et orthographiques
 
-## 2023-02-27
+## 2023-02-27 (v13 - Stable & Beta)
 - Correction de 2 bugs avec les templates: topic de base incorrectement identifié, underscore à la place d'espaces dans le nom
 - Les statistiques ne sont poussées que toutes les 5 à 10 minutes en cas d'échec
 - Utilisation de `127.0.0.1` au lieu de localhost pour l'url de callback (Workaround par rapport à un problème avec le fichier hosts sur la Luna)
