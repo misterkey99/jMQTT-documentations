@@ -1,6 +1,8 @@
 ## 2023-11-26 (Dev)
 - Suppression de la doc et du changelog de la repository principale
 - Correction des derniers liens restants vers l'ancienne doc et repository
+- Correction du template Shelly Plus Plug S (merci mld.sebastien, nebz, Jeandhom et Furaxworld)
+- Qualité du code : Regroupement des fichiers de PHPStan (tests statiques PHP)
 
 ## 2023-11-25 (v23.11.2 Beta)
 - Ajout du template pour Tomotics WiFi switch v1 (merci SuperToma)
