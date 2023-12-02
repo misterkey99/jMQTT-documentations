@@ -1,3 +1,6 @@
+## 2023-12-02 (Dev)
+- Correction orthographique (merci misterkey99)
+
 ## 2023-12-01 (v23.11.3 - Stable & Beta)
 - Suppression de la doc et du changelog de la repository principale
 - Correction des derniers liens restants vers l'ancienne doc et repository
