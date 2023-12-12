@@ -3,7 +3,7 @@
 Le plugin jMQTT permet de connecter Jeedom à un ou plusieurs serveurs MQTT (appelé Broker) afin de recevoir les messages souscrits et de publier ses propres messages.
 Ses principales fonctionnalités sont :
 
- - Installation facilité d'un Broker MQTT en local sur Jeedom (service Mosquitto) ;
+ - Installation facilitée d'un Broker MQTT en local sur Jeedom (service Mosquitto) ;
  - Prise en charge de plusieurs Broker ;
  - Création automatique des équipements MQTT, création automatique des commandes d'information, options pour désactiver ces automatismes ;
  - Ajout manuel d'équipement MQTT ;
@@ -68,7 +68,7 @@ Après installation, il suffit d'activer le plugin sur la page de configuration 
 
 Quelques instants sont nécessaires à l'installation des dépendances. Le suivi de la progression est possible via le log `jMQTT_dep`.
 
-jMQTT est un Client MQTT pour Jeedom, il faut donc un Broker pour pouvoir d'utiliser. Par défaut, jMQTT n'installe plus automatiquement le Broker "Mosquitto" sur la machine hébergeant Jeedom pendant l'installation des dépendances. A présent jMQTT essaye de détecter si Mosquitto est installé par un autre plugin (ou non). Si vous n'avez pas encore de Broker et que jMQTT n'en voit pas un installé autre plugin, lancez l'installation de Mosquitto en cliquant sur le bouton *Installer* et attendez la fin de la procédure.
+jMQTT est un Client MQTT pour Jeedom, il faut donc un Broker pour pouvoir d'utiliser. Par défaut, jMQTT n'installe plus automatiquement le Broker "Mosquitto" sur la machine hébergeant Jeedom pendant l'installation des dépendances. A présent jMQTT essaye de détecter si Mosquitto est installé par un autre plugin (ou non). Si vous n'avez pas encore de Broker et que jMQTT n'en voit pas un d'installé par un autre plugin, lancez l'installation de Mosquitto en cliquant sur le bouton *Installer* et attendez la fin de la procédure.
 
 Il suffit ensuite de configurer vos modules domotique compatible MQTT pour qu'ils se connectent à votre Broker (s'il est installé par jMQTT l'IP du Broker est celle votre Jeedom sur le port 1883).
 
@@ -91,7 +91,7 @@ Détail des différents boutons :
   - Broker : sert à [ajouter un client MQTT](#ajout-manuel-dun-équipement) pour accéder à un nouveau Broker MQTT;
   - Santé : ouvre la [fenêtre de Santé](#santé-du-plugin) de jMQTT;
   - Templates : ouvre la [fenêtre du Gestionnaire de Template](#gestion-des-templates);
-  - Equipement : permet d'[ajouter manuellement un équipement](#ajout-manuel-dun-équipement) lié à un des Broker;
+  - Equipement : permet d'[ajouter manuellement un équipement](#ajout-manuel-dun-équipement) lié au Broker;
 
 En-dessous se trouve un champ de recherche, puis un panneau listant les équipements par Broker :
 
@@ -115,7 +115,7 @@ A la suite du Broker se trouve tous les équipements rattachés à celui-ci.
 
 Un équipement :
   - Grisé est inactif
-  - Présenté avec une petite icône d'oeil barré ou non indique qu'il est non visible ou visible
+  - Présenté avec une petite icône d'oeil barré ou non indique qu'il est visible ou invisible
   - Présenté avec une petite icône d’inclusion superposée, est un équipement dont l'*Ajout automatique des commandes* est activé (détails dans [Onglet Equipement](#onglet-equipement))
 
 Il existe également une vue sous forme de table (TableView) :
@@ -207,25 +207,25 @@ Il faut d'abord configurer les Topics de souscription Temps Réel pour récupér
 
 Le mode temps réel s’active, pour le Broker concerné, en cliquant sur le bouton *Mode Temps Réel* en haut à droite sur l'équipement Broker et se désactive en recliquant sur le même bouton (encadré 2), ou automatiquement après environ 3 minutes.
 
-Les messages reçu sont stockés uniquement coté navigateur.
+Les messages reçus sont stockés uniquement coté navigateur.
 
 Selon les messages reçus, des icônes peuvent apparaitre dans la colonne Option (encadré 3) :
 
   - Les icônes orange signifient que les messages ont été republiés lors de l'activation du mode Temps Réel et sont retenues par le Broker (elles sont Retain),
-  - Les icônes vertes montrent permettent de savoir que ce topic est déjà porté par un équipement jMQTT. En passant la souris sur l'icône les équipements concernés sont affichés.
+  - Les icônes vertes permettent de savoir que ce topic est déjà porté par un équipement jMQTT. En passant la souris sur l'icône les équipements concernés sont affichés.
 
 Une fois des messages identifiés, des outils sont disponibles en fin de ligne (encadré 4) pour les utiliser.
 
   - La première icône permet d'ajouter un équipement à partir de ce topic,
   - La seconde d'ajouter une commande avec ce topic et jsonPath à un équipement existant,
-  - La troisième de découper un payload et de créer de nouvelle lignes dans la page Temps Réel,
+  - La troisième de découper un payload et de créer de nouvelles lignes dans la page Temps Réel,
   - La quatrième icône sert à supprimer la ligne de la vue Temps Réel.
 
 ### Gestion des Interactions
 
 Il est possible d'envoyer en MQTT des demandes d'interaction à Jeedom au travers du "Topic des interactions de Jeedom" décrit dans la section [Configuration de l'équipement Broker](#configuration).
 
-3 topic sont utilisé pour les interaction :
+3 topics sont utilisés pour les interactions :
 
  - jMQTT attend des demandes d'interaction directement sur le topic présent dans la case "Topic des interactions de Jeedom". Par exemple, pour exécuter la commande `#[Chambre][Lampe][On]#`, il est possible d'envoyer la demande "Allume la lampe dans la Chambre" sur ce topic.
  - Une réponse du moteur d'interaction sera effectuée en json sur le sous-topic '/reply'. Par exemple, dans le cas précédent, la réponse `{"status":"ok","query":"","reply":"C'est fait (Chambre Lampe On)"}` y serait envoyée.
@@ -238,9 +238,9 @@ Les **équipements "classiques"** portent les commandes info qui récupéreront 
 
 3 onglets sont présents sur les équipements :
 
-  - Equipement, permet la confguration de base de l'équipement lui-même,
+  - Equipement, permet la configuration de base de l'équipement lui-même,
   - Commandes, recense toutes les commandes de équipement,
-  - L'icone Temps Réel, permets d'accéder à la page Temps Réel du Broker auquel cet équipement est rattaché.
+  - L'icone Temps Réel, permet d'accéder à la page Temps Réel du Broker auquel cet équipement est rattaché.
 
 
 ### Onglet Equipement
@@ -250,7 +250,7 @@ Les **équipements "classiques"** portent les commandes info qui récupéreront 
 Dans le premier onglet d’un équipement jMQTT, nous trouvons les paramètres communs aux autres équipements Jeedom, ainsi que cinq paramètres spécifiques au plugin :
   - _Broker associé_ : Broker auquel est associé l'équipement. **Attention**: ne modifier ce paramètre qu'en sachant bien ce que vous faites ;
   - _Inscrit au Topic_ : topic de souscription auprès du Broker MQTT. Pour un équipement de type Broker, ce paramètre n'est pas modifiable, il est imposé par le Client-Id au Broker, voir [Onglet Broker](#onglet-Broker) ;
-  - _Ajout automatique des commandes_ : si coché, les [commandes de type information](#commandes-de-type-information) seront automatiquement créés par le plugin, et l’équipement apparaitra avec une petite icône d’inclusion superposé dans la page de [Gestion des équipements](#gestion-des-équipements). La case est cochée par défaut ;
+  - _Ajout automatique des commandes_ : si coché, les [commandes de type information](#commandes-de-type-information) seront automatiquement créés par le plugin, et l’équipement apparaitra avec une petite icône d’inclusion superposée dans la page de [Gestion des équipements](#gestion-des-équipements). La case est cochée par défaut ;
   - _Qos_ : qualité de service souscrit ;
   - _Type d'alimentation_ : paramètre libre vous permettant de préciser le type d'alimentation de l'équipement (non disponible pour un équipement Broker) ;
   - _Commande d'état de la batterie_ : commande de l'équipement qui sera utilisée comme niveau de batterie. Si la commande info est de type binaire, alors la valeur de la batterie sera 10% (0) ou 100% (1). Si la commande info est de type numérique, alors la valeur sera utilisée comme pourcentage de batterie (non disponible pour un équipement Broker) ;
@@ -454,7 +454,7 @@ Pour un message dont le titre est `test` et le contenu est `Lumière entrée all
 
 **Sous-type Couleur**
 
-La configuration suivante publiera le code couleur sélectionnée via un widget sélecteur de couleur :
+La configuration suivante publiera le code couleur sélectionné via un widget sélecteur de couleur :
 
 ![Commande Action sous-type Couleur](images/2023-05-20_cmd_action_color.png)
 
@@ -478,7 +478,7 @@ Soit respectivement, en supposant que la valeur sélectionnée sur le widget est
  - `{"name":"mode","value":"auto"}` sur le topic `hw/set`
  - `auto` sur le topic `boiler/mode`
 
-Ici, la liste de choix est pour les 2 commandes `on|On;auto|Auto;off|Off`. Cette liste est construite de la même façon que pour toutes les autre commandes Liste dans Jeedom : une suite de `valeur|texte` séparées entre elles par des points-virgules.
+Ici, la liste de choix est pour les 2 commandes `on|On;auto|Auto;off|Off`. Cette liste est construite de la même façon que pour toutes les autres commandes Liste dans Jeedom : une suite de `valeur|texte` séparées entre elles par des points-virgules.
 
 > **Note**
 >
@@ -489,8 +489,8 @@ Ici, la liste de choix est pour les 2 commandes `on|On;auto|Auto;off|Off`. Cette
 ![Cassic/JSON buttons](images/2022-10-16_classic_json_buttons.png)
 
 Deux boutons en haut à droite de la page permettent de choisir entre 2 types du vue :
-  - La vue **Classic** montre les commandes dans l’ordre d’affichage sur la tuile du Dashboard. Elle permet de les réordonner par glissé/déposé ;
-  - La vue **JSON** affiche un arbre hiérarchique permettant de naviguer à l'intérieur des payload JSON, de les déplier/replier, et de créer les commandes information souhaitées (se reporter au paragraphe _Payload JSON_) de la section [Commandes de type Information](#commandes-de-type-information)). Dans cette vue, l’ordonnancement des commandes via glissé/déposé est désactivée.
+  - La vue **Classic** montre les commandes dans l’ordre d’affichage sur la tuile du Dashboard. Elle permet de les réordonner par glisser/déposer ;
+  - La vue **JSON** affiche un arbre hiérarchique permettant de naviguer à l'intérieur des payloads JSON, de les déplier/replier, et de créer les commandes information souhaitées (se reporter au paragraphe _Payload JSON_) de la section [Commandes de type Information](#commandes-de-type-information)). Dans cette vue, l’ordonnancement des commandes via glisser/déposer est désactivé.
 
 ## Ajout manuel d'un équipement
 
@@ -508,7 +508,8 @@ Pour plus d’information sur les topics MQTT, nous conseillons la lecture de [M
 
 Un équipement peut être dupliqué via le bouton `Dupliquer` situé en haut à gauche de la page de configuration de l’équipement.
 
-Une boite de dialogue demande le nom du nouvel équipement. Sont dupliqués :
+Une boite de dialogue demande le nom du nouvel équipement.
+Sont dupliqués :
   - Tous les paramètres de l’équipement y compris les paramètres de configuration avancés, sauf :
       - Le nom bien sûr ;
       - Le statut *Activer* : l’équipement est désactivé par défaut ;
@@ -594,7 +595,7 @@ Il existe de nombreux Broker MQTT gratuits ou payants disponibles en ligne pour 
  - [MyQttHub.com](https://myqtthub.com/en/) : Easily create your MQTT IoT project with MyQttHub.com, an open and scalable Cloud MQTT platform with professional support options.
  - Etc
 
-La grande majorité de ces Broker ne supportent pas de communication "en clair" sur Internet, et demandent la connexion via MQTT over TLS ou MQTTS.
+La grande majorité de ces Brokers ne supportent pas de communication "en clair" sur Internet, et demandent la connexion via MQTT over TLS ou MQTTS.
 Cela est tout à fait compréhensible, car "en clair" n'importe qui peut en lire le contenu des messages, ou pire, envoyer des messages/ordres à votre place.
 
 Depuis mai 2021, jMQTT supporte la connexion aux Broker publique ou privé en MQTTS. Est aussi implémenté un mecanisme de validation du Certificat du Serveur et l'emploi une paire de clés cryptographique personnalisée (Certificat & Clé Privée Client) pour un chiffrement asymétrique de bout en bout.
@@ -626,7 +627,7 @@ Il faudra alors modifier la configuration du service mosquitto et ajouter (à mi
     certfile /etc/mosquitto/certs/mosquitto.crt
     keyfile /etc/mosquitto/certs/mosquitto.key
 
-**Il s'agit d'une opération complexe, réservé à ceux qui en comprennent les implications et savent utiliser les certificats.**
+**Il s'agit d'une opération complexe réservée à ceux qui en comprennent les implications et savent utiliser les certificats.**
 
 
 # FAQ
@@ -638,7 +639,7 @@ Il faudra alors modifier la configuration du service mosquitto et ajouter (à mi
 
 ## J'ai changé le niveau de log mais je n'ai pas plus de détails
 
-Si vous changiez le niveau de log, le démon devait être relancé dans les anciennes version.
+Si vous changiez le niveau de log, le démon devait être relancé dans les anciennes versions.
 Pour cela, il fallait désactiver puis réactiver l'équipement Broker concerné.
 
 > **Note**
@@ -651,17 +652,17 @@ Vérifier qu’il n’y a pas 2 clients ayant le même identifiant, voir *Client
 
 # Problèmes inconnus
 
-Les problèmes en cours d’investigation sont sur GitHub : [Issues jMQTT](https://github.com/BadWolf42/jMQTT/issues).
+Les problèmes en cours d’investigations sont sur GitHub : [Issues jMQTT](https://github.com/BadWolf42/jMQTT/issues).
 
 
 ## Quelles données fournir pour investigation en cas de problèmes ?
 
 En cas de problèmes à l’installation, fournir les fichiers de log jMQTT (niveau Debug) et jMQTT\_dep.
 
-En cas de problèmes à l’utilisation, passer le plugin et les Broker en niveau de log `Debug` reproduire le problème et fournir :
-  - Des captures d'écran ds pages Santé de Jeedom (avec les liste des autres plugins isntallés) et de jMQTT,
+En cas de problèmes à l’utilisation, passer le plugin et les Brokers en niveau de log `Debug` reproduire le problème et fournir :
+  - Capture d'écran de la page Santé de Jeedom (avec les listes des autres plugins isntallés) et de jMQTT,
   - Tous les fichiers de log commençant par `jMQTT`,
-  - Le nom du/des Broker concerné(s),
+  - Le nom du/des Broker(s) concerné(s),
   - Le résultat de la commande suivante pour chaque Broker concerné (fichier `/tmp/diag_jmqtt.log`) :
 
 <!-- end list -->
@@ -675,13 +676,13 @@ Si une authentification est requise, ajouter `-u username` et `-p password` avan
 
 ## Commander un Virtuel via un message MQTT
 
-Supposons un équipement virtuel, appelé *Saison Virtuel*, dont une commande action de sous-type Liste permette de définir la saison (été, hiver). L’objectif est de pouvoir définir cette saison via un message MQTT envoyé par une application externe.
+Supposons un équipement virtuel, appelé *Saison Virtuel*, dont une commande action de sous-type Liste permet de définir la saison (été, hiver). L’objectif est de pouvoir définir cette saison via un message MQTT envoyé par une application externe.
 
 Supposons donc également un équipement jMQTT que nous aurons créé, appelé *Saison\_jMQTT*, souscrivant au topic `saison/#`, dont une commande info est `saison/set`.
 
 Nous souhaitons que lorsqu'une application publie le message `saison/set hiver` sur le Broker, la commande info saison du virtuel soit mise à jour avec *hiver*.
 
-Pour ce faire, il faut créer une deuxième commande action côté virtuel (commande *set\_saison* ci-dessous) qui mette à jour l’information saison du virtuel à partir de celle de l’équipement jMQTT. Le virtuel est donc configuré comme ceci :
+Pour ce faire, il faut créer une deuxième commande action côté virtuel (commande *set\_saison* ci-dessous) qui met à jour l’information saison du virtuel à partir de celle de l’équipement jMQTT. Le virtuel est donc configuré comme ceci :
 
 ![saison virtuel](images/2022-10-16_saison_virtuel.png)
 
